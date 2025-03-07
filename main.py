@@ -19,9 +19,7 @@ def main():
     ai_summarizer = AISummary(api_key=openai_api_key)
     
     summary = ai_summarizer.generate_summary(activity_output)
-    print("---")
     print(summary)
-    print("---")
 
 if __name__ == '__main__':
     main()
