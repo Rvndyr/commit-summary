@@ -38,8 +38,8 @@ jobs:
 
       - name: Copy summary file
         run: |
-          mkdir -p gh-pages/src/timeline
-          cp activity_summary.md gh-pages/src/timeline/
+          mkdir -p gh-pages/public/timeline
+          cp activity_summary.md gh-pages/public/timeline/
 
       - name: Commit and push changes
         working-directory: gh-pages
