@@ -42,7 +42,7 @@ jobs:
           cp activity_summary.md public/timeline/
 
       - name: Commit and push changes
-        working-directory: gh-pages
+        working-directory: public
         run: |
           git config user.name "GitHub Action"
           git config user.email "action@github.com"
