@@ -2,7 +2,7 @@ name: Generate and Deploy GitHub Activity Summary
 
 on:
   schedule:
-    - cron: "0 0 * * 0" # Runs weekly on Sunday at midnight
+    - cron: "0 0 1 * *" # Runs at midnight on the first day of every month
   workflow_dispatch:
 
 jobs:
@@ -49,3 +49,8 @@ jobs:
           git add timeline/activity_summary.md
           git commit -m "Update GitHub activity summary [skip ci]" || echo "No changes to commit"
           git push
+
+      - name: Trigger Netlify Build
+        run: |
+          curl -X POST "https://api.netlify.com/api/v1/sites/${{ secrets.NETLIFY_SITE_ID }}/builds" \
+          -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}"
