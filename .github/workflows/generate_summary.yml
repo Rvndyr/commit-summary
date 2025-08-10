@@ -46,6 +46,6 @@ jobs:
         run: |
           git config user.name "GitHub Action"
           git config user.email "action@github.com"
-          git add public/timeline/activity_summary.md
+          git add timeline/activity_summary.md
           git commit -m "Update GitHub activity summary [skip ci]" || echo "No changes to commit"
           git push
