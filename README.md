@@ -1,1 +1,3 @@
 # commit-summary
+[![Generate and Deploy GitHub Activity Summary](https://github.com/Rvndyr/commit-summary/actions/workflows/generate_summary.yml/badge.svg?branch=main)](https://github.com/Rvndyr/commit-summary/actions/workflows/generate_summary.yml)
+A python script that uses OpenAI to generate a summary of your github activity feed for the week and uses a github action to post it to a markdown file into a target repo. 
